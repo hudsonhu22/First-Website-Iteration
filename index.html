@@ -2,13 +2,11 @@
 <html>
 
 <style>
-
 * {
   box-sizing: border-box;
 }
-
 .bg-image {
-  background-image: url("abstract-abstraction-biology-chemistry-wallpaper-preview.jpg");
+  background-image: url("photographer.jpg");
   filter: blur(8px);
   -webkit-filter: blur(8px);
   
@@ -19,13 +17,15 @@
 }
   
 .bg-text {
+  background-color: rgb(0,0,0);
   background-color: rgba(0,0,0, 0.4);
   color: white;
+  font-weight: bold;
   border: 3px solid #f1f1f1;
   position: absolute;
-  top: 30%;
+  top: 10%;
   left: 50%;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, 0%);
   z-index: 2;
   width: 80%;
   padding: 20px;
@@ -42,7 +42,7 @@ float: left;
 display: block;
 color: #81853e;
 text-align: center;
-padding: 30px 16px;
+padding: 15px 20px;
 text-decoration: none;
 font-size: 17px;
 }
@@ -56,6 +56,25 @@ color: black;
 background-color: #6e5f03;
 color: white;
 }
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px;
+  transform: translate(-0%, 100%);
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img {
+border-radius: 50%
+}
+
 </style>
 
 <div class="bg-image"></div>
@@ -66,6 +85,17 @@ color: white;
 <div class="navbar">
   <a class="active" href="#home">Home</a>
   <a href="#contact">Contact</a>
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#zzz;">
+    <img src="path.jpg" alt= "My Photo" width = "10" height="10"
+  </div>
+  <div class="column" style="background-color:#zzz;">
+    <h2>About me:</h2>
+    <p>Academics -> I'm a 3rd year undergaduate student at the University of Toronto studying a double major in Cell and Molecular Biology and Quantiative Biology.</p>
+    <p>Interests -> I have an interest in neurscience and mathematics!</p>
+  </div>
 </div>
 
   
