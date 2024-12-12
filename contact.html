@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  background-color: #999;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #FFFFFF;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #111;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  color: black;
+  padding: 5px 5px;
+  border: none;
+  float: right;
+}
+
+.openbtn:hover {
+  background-color: #FFFFFF;
+}
+
+.bg-image {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+  
+.bg-text {
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.4);
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 2;
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+}
+  
+.navbar {
+background-color: #333;
+overflow: hidden;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px;
+  transform: translate(-0%, 100%);
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.profile-image {
+  border: 5px dashed #FF5733;
+  border-radius: 50%;
+  float: center;
+}
+.aboutmeP {
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+}
+  
+.myInterests {
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+}
+
+hr.dashed {
+  border: 1px solid #333;
+  margin: 20px 0;
+}
+  
+</style>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="#">Home</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="bg-image">
+  <img class="header-image" src="Untitled.png" alt= "My Photo">
+</div>
+  
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰</button>  
+</div>
+
+<div class="bg-image"></div>
+<div class="bg-text">
+  <h1>CONTACT</h1>
+  <p>This is my personal page! </p>
+</div>
+
+<hr class="dashed">
+
+<div class="row">
+  <div class="column" style="background-color:#zzz;">
+    <img class="profile-image" src="T9WTDDT53-U07LENQL9HU-fe92b265f568-512.png" alt= "My Photo" width = "300" height="300">
+  </div>
+  <div class="column" style="background-color:#zzz;">
+    <h2>About me:</h2>
+    <p class="aboutmeP">I'm a 3rd year undergaduate student at the University of Toronto studying a double major in Cell and Molecular Biology and Quantiative Biology.</p>
+    <p class="myInterests">I am passionate about neuroscience and mathematics!</p>
+  </div>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "200px";
+  document.getElementById("main").style.marginRight = "200px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginRight= "0";
+}
+</script>
+  
+<html>
