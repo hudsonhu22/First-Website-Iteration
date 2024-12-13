@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+.header {
+  background-image: bg-image;
+  padding: 80px;
+  text-align: center;
+}
 .sidebar {
   height: 100%;
   width: 0;
@@ -54,30 +59,6 @@
   background-color: #FFFFFF;
 }
 
-.bg-image {
-  width: 100%
-  height: 10vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover
-}
-
-  
-.bg-text {
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.4);
-  color: white;
-  font-weight: bold;
-  border: 3px solid #f1f1f1;
-  position: absolute;
-  top: 10%;
-  left: 20%;
-  transform: translate(-50%, 0%);
-  z-index: 2;
-  width: 50%;
-  padding: 20px;
-  text-align: center;
-}
   
 .column {
   float: left;
@@ -130,11 +111,6 @@ hr.dashed {
   
 <div id="main">
   <button class="openbtn" onclick="openNav()">☰</button>  
-</div>
-
-<div class="bg-image"></div>
-<div class="bg-text">
-  <h1>Hugo's Page</h1>
 </div>
 
 <hr class="dashed">
