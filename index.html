@@ -1,73 +1,32 @@
 <!DOCTYPE html>
 <html>
-
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
 <style>
 * {
   box-sizing: border-box;
 }
-
-.header {
-  background-image: bg-image;
-  padding: 80px;
-  text-align: center;
-  height: 10vh;
-}
-.sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 5;
-  top: 0;
-  right: 0;
-  background-color: #999;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
+.randomBut {
+text-align: center;
 }
 
-.sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #FFFFFF;
-  display: block;
-  transition: 0.3s;
+.randomBut2 {
+text-align: center;
 }
-
-.sidebar a:hover {
-  color: #111;
+.randomBut3 {
+text-align: center;
 }
-
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+.randomBut4 {
+text-align: center;
 }
-
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #FFFFFF;
-  color: black;
-  padding: 5px 5px;
-  border: none;
-  float: right;
-}
-
-.openbtn:hover {
-  background-color: #FFFFFF;
-}
-
-  
 .column {
   float: left;
   width: 50%;
   padding: 10px;
-  height: 300px;
-  transform: translate(-0%, 100%);
-  text-align: center;
+  height: 100vh;
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
 }
 
 .row:after {
@@ -75,72 +34,40 @@
   display: table;
   clear: both;
 }
-
-
-.profile-image {
-  border: 5px solid #FF5733;
-  border-radius: 50%;
-}
-  
-.aboutmeP {
-  font-family: 'Arial', sans-serif;
-  font-size: 20px;
-}
-  
-.myInterests {
-  font-family: 'Arial', sans-serif;
-  font-size: 20px;
-}
-
-hr.dashed {
-  border: 1px solid #333;
-  margin: 5px 100px;
-}
-  
 </style>
-
-<div class="header">
-  <h1>Hugo Hudson</h1>
-</div>
-  
-<div id="mySidebar" class="sidebar">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <a href="index.html">Home</a>
-  <a href="projects.html">Projects</a>
-  <a href="contact.html">Contact</a>
-</div>
-
-<div class="bg-image">
-  <img class="header-image" src="WebsiteJpg_XL-FNCOM_Main Visual_Red_Website.jpg" alt= "My Photo">
-</div>
-  
-<div id="main">
-  <button class="openbtn" onclick="openNav()">☰</button>  
-</div>
-
-<hr class="dashed">
-
+<body>
 <div class="row">
-  <div class="column" style="background-color:#zzz;">
-    <img class="profile-image" src="T9WTDDT53-U07LENQL9HU-fe92b265f568-512.png" alt= "My Photo" width = "300" height="300">
+  <div class="column" style="background-color:#618685;">
+    <h1>Hugo Hudson</h1>
+    <h2>Computational Neuroscientist</h2>
+    <p class="randomBut">
+    <button onclick="aboutFunction()" id="aboutBtn" class="AboutBtn">About</button></p>
+    <p class="randomBut2"><button onclick="experienceFunction()" id="experienceBtn" class="ExperienceBtn">Experience</button></p>
+    <p class="randomBut3"><button onclick="projectsFunction()" id="projectsBtn" class="ProjectsBtn">Projects</button></p>
+    <p class="randomBut4"><button onclick="selfLearningFunction()" id="selfLearningBtn" class="selfLearningBtn">Self-Learning</button></p>
   </div>
-  <div class="column" style="background-color:#zzz;">
-    <h2>About me:</h2>
-    <p class="aboutmeP">I'm a 3rd year undergraduate student at the University of Toronto studying a double major in Cell and Molecular Biology and Quantiative Biology.</p>
-    <p class="myInterests">A little more about me: I am passionate about neuroscience and mathematics!</p>
+  <div class="column" style="background-color:#618685;">
+    <p id="aboutSection">I'm a third year undergraduate student at the University of Toronto studying a double major in Cell and Molecular Biology and Quantitative Biology.</p>
+    <p>At the moment, I am a Research Trainee at the Krembil Centre for Neuroinformatics. Specifically my work is focused around computational genomics and epigentic alterations in neuropsychiatric diseases.</p>
+    <p>I love to learn, and have taught myself a lot of my computer science and bioinformatics knowledge.</p>
+    <p id="experienceSection"> Random</p>
+    <p id="projectsSection"> Other</p>
+    <p id="selfLearningSection"> Other</p>
   </div>
 </div>
-
 <script>
-function openNav() {
-  document.getElementById("mySidebar").style.width = "200px";
-  document.getElementById("main").style.marginRight = "200px";
+function aboutFunction() {
+document.getElementById("aboutSection").scrollIntoView({behavior: "smooth" });
 }
-
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginRight= "0";
+function experienceFunction() {
+document.getElementById("experienceSection").scrollIntoView({behavior: "smooth" });
+}
+function projectsFunction() {
+document.getElementById("projectsSection").scrollIntoView({behavior: "smooth" });
+}
+function selfLearningFunction() {
+document.getElementById("selfLearningSection").scrollIntoView({behavior: "smooth" });
 }
 </script>
-  
+</body>
 <html>
