@@ -4,201 +4,182 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
-  * {
-    box-sizing: border-box;
-  }
-  .column {
-    float: left;
-    width: 75%;
-    padding: 10px;
-    height: 75vh;
-    color: #111;
-    font-family: 'Roboto', sans-serif;
-  }
-
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  .aboutSection {
-  font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    padding: 10px;
+    * {
+      box-sizing: border-box;
     }
-  
-  .aboutBtn, .ProjectsBtn, .selfLearningBtn {
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    border: none;
-    background-color: #FFFFFF;
-    color: gray;
-    cursor: pointer;
-  }
 
-  .aboutBtn:hover, .ProjectsBtn:hover, .selfLearningBtn:hover {
-    background-color: #FFFFFF;
-    color: black;
-  }
-
-  .project-boxes {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  .project-box {
-    background-color: #FFFFFF;
-    border: 1px solid #FFFFFF;
-    border-radius: 8px;
-    padding: 20px;
-    width: 500px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-  }
-  .scroll-box
-  {
-    background-color: #FFFFFF;
-    border: 1px solid #FFFFFF;
-    border-radius: 8px;
-    padding: 20px;
-    width: 175px;
-    height: 350px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-  }
-
-  .project-box:hover, .scroll-box:hover {
-    background-color: #FFFFFF;
-    border: 1px solid #FFFFFF;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .project-box h3, .scroll-box h3 {
-    margin-top: 0;
-    color: green;
-  }
-
-  .project-box p, .scroll-box p {
-    color: #111;
-    font-size: 14px;
-  }
-
-  .scroll-container {
-    overflow: hidden;
-    background-color: #FFFFFF;
-    width: 100%;
-    cursor: grab;
-  }
-
-  .scroll-row {
-    display: flex;
-    gap: 20px;
-    padding: 10px;
-    flex-wrap: nowrap;
-  }
-
-  .scroll-box {
-    min-width: 250px;
-    background-color: #FFFFFF;
-    border: 1px solid #FFFFFF;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0;
-  }
-  .BigHead{
-  font-family: 'Roboto', sans-serif;
-    font-size: 50px;
-    color: green;
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
     }
-    
-  .helpAnnotations {
-  background-color: #FFFFFF;
-  }
-  .helpSection {
-  background-color: #FFFFFF;
-  color: black;
-  font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-  }
-  .helpSubComponent {
-  background-color: #FFFFFF;
-  color: black;
-  font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-  }
-  
-  .fa-linkedin {
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  background-color: #FFFFFF;
-  border: 1px solid #FFFFFF;
-}
-.fa-linkedin:hover {
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  background-color: #FFFFFF;
-  border: 1px solid #FFFFFF;
-  color: gray;
-}
-.fa-github {
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  background-color: #FFFFFF;
-  border: 1px solid #FFFFFF;
-}
-.fa-github:hover {
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  background-color: #FFFFFF;
-  border: 1px solid #FFFFFF;
-  color: gray;
-}
-.profilePhoto {
-border: 5px solid green;
-border-radius 50%;
-height: 100px;
-width: 100px;
-}
 
+    .row {
+      display: flex;
+      flex-wrap: wrap; /* Responsive layout */
+      gap: 10px; /* Space between columns */
+    }
+
+    .column {
+      flex: 1;
+      padding: 10px;
+      color: #111;
+    }
+
+    .column:first-child {
+      flex: 1;
+      max-width: 30%; /* Left column size */
+    }
+
+    .column:last-child {
+      flex: 2; /* Right column takes more space */
+    }
+
+    .BigHead {
+      font-size: 50px;
+      color: green;
+    }
+
+    .aboutSection {
+      font-size: 20px;
+      padding: 10px;
+    }
+
+    .aboutBtn, .ProjectsBtn, .selfLearningBtn {
+      font-size: 20px;
+      border: none;
+      background-color: #FFFFFF;
+      color: gray;
+      cursor: pointer;
+    }
+
+    .aboutBtn:hover, .ProjectsBtn:hover, .selfLearningBtn:hover {
+      color: black;
+    }
+
+    .profilePhoto {
+      border: 5px solid green;
+      border-radius: 50%;
+      height: 200px;
+      width: 200px;
+    }
+
+    .project-boxes {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .project-box {
+      background-color: #FFFFFF;
+      border: 1px solid #FFFFFF;
+      border-radius: 8px;
+      padding: 20px;
+      width: 500px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-box h3 {
+      color: green;
+    }
+
+    .project-box p {
+      color: #111;
+      font-size: 14px;
+    }
+
+    .scroll-container {
+      overflow: hidden;
+      background-color: #FFFFFF;
+      width: 100%;
+      cursor: grab;
+    }
+
+    .scroll-row {
+      display: flex;
+      gap: 20px;
+      padding: 10px;
+      flex-wrap: nowrap;
+    }
+
+    .scroll-box {
+      min-width: 250px;
+      background-color: #FFFFFF;
+      border: 1px solid #FFFFFF;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .scroll-box h3 {
+      color: green;
+    }
+
+    .scroll-box p {
+      color: #111;
+      font-size: 14px;
+    }
+
+    .fa-linkedin, .fa-github {
+      font-size: 30px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .fa-linkedin {
+      background-color: #0077b5;
+      color: white;
+    }
+
+    .fa-linkedin:hover {
+      color: gray;
+    }
+
+    .fa-github {
+      background-color: #f5f5f5;
+      color: black;
+    }
+
+    .fa-github:hover {
+      color: gray;
+    }
   </style>
 </head>
 <body>
   <div class="row">
-    <div class="column" style="background-color:#FFFFFF;">
+    <div class="column">
       <h1 class="BigHead">Hugo Hudson</h1>
       <h2>Computational Neuroscientist</h2>
       <img src="realisticLabPhoto.png" alt="Profile Photo" class="profilePhoto">
       <p>
         <button onclick="aboutFunction()" id="aboutBtn" class="aboutBtn">About</button>
       </p>
-      <p><button onclick="projectsFunction()" id="projectsBtn" class="ProjectsBtn">Projects</button></p>
-      <p><button onclick="selfLearningFunction()" id="selfLearningBtn" class="selfLearningBtn">Self-Learning</button></p>
-      <a href="https://www.linkedin.com/in/hugo-hudson-a767b1326/"> <button class="fa fa-linkedin"></button>
-      <a href="https://github.com/hudsonhu22"><button class="fa fa-github"></button>
+      <p>
+        <button onclick="projectsFunction()" id="projectsBtn" class="ProjectsBtn">Projects</button>
+      </p>
+      <p>
+        <button onclick="selfLearningFunction()" id="selfLearningBtn" class="selfLearningBtn">Self-Learning</button>
+      </p>
+      <a href="https://www.linkedin.com/in/hugo-hudson-a767b1326/" target="_blank" class="fa fa-linkedin"></a>
+      <a href="https://github.com/hudsonhu22" target="_blank" class="fa fa-github"></a>
     </div>
 
-    <div class="column" style="background-color:#FFFFFF;">
-      <p id="aboutSection" class="aboutSection">I'm a third year undergraduate student at the University of Toronto studying a double major in Cell and Molecular Biology and Quantitative Biology.</p>
-      <p class="aboutSection">At the moment, I am a Research Trainee at the Krembil Centre for Neuroinformatics. Specifically, my work is focused around computational genomics and epigenetic alterations in neuropsychiatric diseases.</p>
-      <p class="aboutSection">I love to learn, and have taught myself a lot of my computer science and bioinformatics knowledge.</p>
+    <div class="column">
+      <p id="aboutSection" class="aboutSection">
+        I'm a third year undergraduate student at the University of Toronto studying a double major in Cell and Molecular Biology and Quantitative Biology.
+      </p>
+      <p class="aboutSection">
+        At the moment, I am a Research Trainee at the Krembil Centre for Neuroinformatics. Specifically, my work is focused around computational genomics and epigenetic alterations in neuropsychiatric diseases.
+      </p>
+      <p class="aboutSection">
+        I love to learn, and have taught myself a lot of my computer science and bioinformatics knowledge.
+      </p>
 
-      <p id="projectsSection"></p>
-      <div class="project-boxes">
+      <div id="projectsSection" class="project-boxes">
         <div class="project-box">
           <h3>Project Title 1</h3>
           <p>Brief explanation of Project 1...</p>
@@ -214,44 +195,18 @@ width: 100px;
       </div>
     </div>
   </div>
-<div class="helpAnnotations">
-<p class="helpSection">Textbook Recommendations</p>
-<p class="helpSubComponent">I've listed some textbooks I have found useful throughout my undergrad for supplementary learning!</p>
-</div>
-  <div id="selfLearningSection" class="scroll-container">
-    <div class="scroll-row">
-      <div class="scroll-box">
-        <h3>Theoretical Neuroscience</h3>
-        <p>Brief explanation of Project 1...</p>
-      </div>
-      <div class="scroll-box">
-        <h3>Probabolistic Graphical Models</h3>
-        <p>Brief explanation of Project 2...</p>
-      </div>
-      <div class="scroll-box">
-        <h3>Natural Transformers</h3>
-        <p>Brief explanation of Project 3...</p>
-      </div>
-      <div class="scroll-box">
-        <h3>Introductory Organic Chemsitry</h3>
-        <p>Brief explanation of Project 3...</p>
-      </div>
-      <div class="scroll-box">
-        <h3>Introductory Organic Chemsitry</h3>
-        <p>Brief explanation of Project 3...</p>
-      </div>
-    </div>
-  </div>
 
   <script>
     function aboutFunction() {
-      document.getElementById("aboutSection").scrollIntoView({behavior: "smooth"});
+      document.getElementById("aboutSection").scrollIntoView({ behavior: "smooth" });
     }
+
     function projectsFunction() {
-      document.getElementById("projectsSection").scrollIntoView({behavior: "smooth"});
+      document.getElementById("projectsSection").scrollIntoView({ behavior: "smooth" });
     }
+
     function selfLearningFunction() {
-      document.getElementById("selfLearningSection").scrollIntoView({behavior: "smooth"});
+      document.getElementById("selfLearningSection").scrollIntoView({ behavior: "smooth" });
     }
   </script>
 </body>
