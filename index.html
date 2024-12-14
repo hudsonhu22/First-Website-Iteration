@@ -15,8 +15,8 @@
 
     .row {
       display: flex;
-      flex-wrap: wrap; /* Responsive layout */
-      gap: 10px; /* Space between columns */
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .column {
@@ -27,11 +27,11 @@
 
     .column:first-child {
       flex: 1;
-      max-width: 30%; /* Left column size */
+      max-width: 40%;
     }
 
     .column:last-child {
-      flex: 2; /* Right column takes more space */
+      flex: 2;
     }
 
     .BigHead {
@@ -195,6 +195,31 @@
       </div>
     </div>
   </div>
+    <div class="helpAnnotations">
+    <p class="helpSection">Textbook Recommendations</p>
+    <p class="helpSubComponent">I've listed some textbooks I have found useful throughout my undergrad for supplementary learning!</p>
+  </div>
+
+  <div id="selfLearningSection" class="scroll-container">
+    <div class="scroll-row">
+      <div class="scroll-box">
+        <h3>Theoretical Neuroscience</h3>
+        <p>Brief explanation of Project 1...</p>
+      </div>
+      <div class="scroll-box">
+        <h3>Probabilistic Graphical Models</h3>
+        <p>Brief explanation of Project 2...</p>
+      </div>
+      <div class="scroll-box">
+        <h3>Natural Transformers</h3>
+        <p>Brief explanation of Project 3...</p>
+      </div>
+      <div class="scroll-box">
+        <h3>Introductory Organic Chemistry</h3>
+        <p>Brief explanation of Project 4...</p>
+      </div>
+    </div>
+  </div>
 
   <script>
     function aboutFunction() {
@@ -208,6 +233,35 @@
     function selfLearningFunction() {
       document.getElementById("selfLearningSection").scrollIntoView({ behavior: "smooth" });
     }
+    const scrollContainer = document.querySelector(".scroll-container");
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    scrollContainer.addEventListener("mousedown", (e) => {
+      isDown = true;
+      scrollContainer.classList.add("active");
+      startX = e.pageX - scrollContainer.offsetLeft;
+      scrollLeft = scrollContainer.scrollLeft;
+    });
+
+    scrollContainer.addEventListener("mouseleave", () => {
+      isDown = false;
+      scrollContainer.classList.remove("active");
+    });
+
+    scrollContainer.addEventListener("mouseup", () => {
+      isDown = false;
+      scrollContainer.classList.remove("active");
+    });
+
+    scrollContainer.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - scrollContainer.offsetLeft;
+      const walk = (x - startX) * 2;
+      scrollContainer.scrollLeft = scrollLeft - walk;
+    });
   </script>
 </body>
 </html>
