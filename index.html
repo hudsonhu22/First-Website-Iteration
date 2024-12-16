@@ -156,16 +156,23 @@
       color: gray;
     }
     
-    .helpSection {
+    .helpSection, .projectSection {
       font-size: 30px;
-      padding: 10px;
+      padding: 5px;
       color: green;
+      text-align: center;
     }
     
     .helpSubComponent {
-      font-size: 20px;
+      font-size: 15px;
       padding: 10px;
       color: black;
+      text-align: center;
+    }
+    .styled-line {
+            border: none;
+            border-top: 2px solid black;
+            margin: 20px 80px;
     }
     
   </style>
@@ -200,7 +207,11 @@
         I love to learn, and have taught myself a lot of my computer science and bioinformatics.
       </p>
 
-      <div id="projectsSection" class="project-boxes">
+    </div>
+  </div>
+  <hr class="styled-line">
+  <p class="projectSection">Projects</p>
+  	<div id="projectsSection" class="project-boxes">
         <div class="project-box">
           <h3>InTune</h3>
           <p>Backend development in Java for a music reviewing desktop application. Configured Rest APIs, and AWS ec2 instance for remote user information storage. Additionally did some front end development by designing the profile pages of users. </p>
@@ -214,8 +225,8 @@
           <p>Implemented a convolution neural network and tuned it for brain tumor MRI classification. The network is able to accurately distinguish between gliomas, meningioma, pituitary and non-tumor cases.</p>
         </div>
       </div>
-    </div>
-  </div>
+      <br>
+      <hr class="styled-line">
     <div class="helpAnnotations">
     <p class="helpSection">Textbook Recommendations</p>
     <p class="helpSubComponent">I've listed some textbooks I have found useful throughout my undergrad for supplementary learning!</p>
