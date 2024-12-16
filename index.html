@@ -39,7 +39,7 @@
 
     .BigHead {
       font-size: 50px;
-      color: green;
+      color: #663399;
     }
 
     .aboutSection {
@@ -60,7 +60,7 @@
     }
 
     .profilePhoto {
-      border: 5px solid green;
+      border: 5px solid #663399;
       border-radius: 50%;
       height: 200px;
       width: 200px;
@@ -118,7 +118,10 @@
     }
 
     .scroll-box h3 {
-      color: green;
+      color: black;
+    }
+    .scroll-box:hover h3 {
+      color: #663399;
     }
 
     .scroll-box p {
@@ -159,7 +162,7 @@
     .helpSection, .projectSection {
       font-size: 30px;
       padding: 5px;
-      color: green;
+      color: #663399;
       text-align: center;
     }
     
@@ -202,6 +205,15 @@
       padding: 5px;
       color: black;
       text-align: center;
+    }
+    .projectLink {
+    font-size:15px;
+    text-decoration: none;
+    color: black;
+    }
+    .projectLink:hover {
+    color: teal;
+    text-decoration: none;
     }
     
     
@@ -246,7 +258,7 @@
           <h3 class="projectTextTitle">InTune</h3>
           <div class="project-container">
           <div class="projectTextBox">
-          <p class="projectText">Backend development in Java for a music reviewing desktop application. Configured Rest APIs, and AWS ec2 instance for remote user information storage. Additionally did some front end development by designing the profile pages of users. </p>
+          <p class="projectText">Backend development in Java for a music reviewing desktop application. Configured Rest APIs, and AWS ec2 instance for remote user information storage. Additionally did some front end development by designing the profile pages of users. <br><br><a href="https://github.com/anzaruoft/MusicIntelliJence" class="projectLink" target="_blank">Click to go to project</a></p>
           </div>
           <div class="column">
           <img src="intunePhoto.png" alt="Photo of Application" class="projectPhoto">
@@ -256,7 +268,8 @@
           <h3 class="projectTextTitle">Cell Specific Age Calculation</h3>
           <div class="project-container">
           <div class="projectTextBox">
-          <p class="projectText">Wrote an R package that computes specific ages of cells, using epigenetic information. More specifically, the use of bulk methylation data as well as cell type proportions for the age inference.</p>
+          <p class="projectText">Wrote an R package that computes specific ages of cells, using epigenetic information. More specifically, the use of bulk methylation data as well as cell type proportions for the age inference.<br><br><a href="https://github.com/hudsonhu22/EpigeneticAging" class="projectLink" target="_blank">Click to go to project</a></p>
+          
           </div>
           <div class="column">
           <img src="cellAgePhoto.png" alt="Photo of Application" class="projectPhoto">
@@ -266,7 +279,7 @@
           <h3 class="projectTextTitle">MRI Classification</h3>
           <div class="project-container">
           <div class="projectTextBox">
-          <p class="projectText">Implemented a convolution neural network and tuned it for brain tumor MRI classification. The network is able to accurately distinguish between gliomas, meningioma, pituitary and non-tumor cases.</p>
+          <p class="projectText">Implemented a convolution neural network and tuned it for brain tumor MRI classification. The network is able to accurately distinguish between gliomas, meningioma, pituitary and non-tumor cases.<br><br><a href="https://github.com/hudsonhu22/Brain-Tumor-MRI-Classification" class="projectLink" target="_blank">Click to go to project</a></p>
           </div>
           <div class="column">
           <img src="mriImage.png" alt="Photo of Application" class="projectPhoto">
