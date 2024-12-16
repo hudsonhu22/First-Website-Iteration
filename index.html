@@ -71,33 +71,6 @@
       margin: 0 auto;
     }
 
-    .project-boxes {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto;
-    }
-
-    .project-box {
-      background-color: #FFFFFF;
-      border: 1px solid #FFFFFF;
-      border-radius: 8px;
-      padding: 20px;
-      width: 500px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .project-box h3 {
-      color: green;
-    }
-
-    .project-box p {
-      color: #111;
-      font-size: 14px;
-    }
-
     .scroll-container {
       overflow: hidden;
       background-color: #FFFFFF;
@@ -204,28 +177,33 @@
             margin: 20px 80px;
     }
     .project-container {
-  	display: flex;
-  	align-items: center;
-  	gap: 20px;
-  	justify-content: space-between;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
 	}
-    .projectPhoto {
-    	border: 2.5px solid black;
-        border-radius: 15%;
-      height: 250px;
-      width: 300px;
-      margin: 0 auto;
-    }
-    .projectTextBox {
-    	flex: 2;
-    }
-    .projectText {
-    flex: 1;
-    font-size: 20px;
-      padding: 30px;
-      color: black;
-      text-align: left;
-    }
+	
+	.projectPhoto {
+	    border: 2.5px solid black;
+	    border-radius: 15%;
+	    height: 250px;
+	    width: 300px;
+	    margin: 0 auto;
+	}
+	
+	.projectTextBox {
+	    flex: 1;
+	}
+	
+	.projectText {
+	    flex: 1;
+	    font-size: 20px;
+	    padding: 30px;
+	    color: black;
+	    text-align: left;
+	}
+
     .projectTextTitle {
     font-size: 25px;
       padding: 5px;
