@@ -174,12 +174,37 @@
             border-top: 2px solid black;
             margin: 20px 80px;
     }
+    .project-container {
+  	display: flex;
+  	align-items: center;
+  	gap: 20px;
+  	justify-content: space-between;
+	}
     .projectPhoto {
-    	border: 5px solid green;
-      height: 150px;
-      width: 200px;
+    	border: 2.5px solid black;
+        border-radius: 15%;
+      height: 250px;
+      width: 300px;
       margin: 0 auto;
     }
+    .projectTextBox {
+    	flex: 2;
+    }
+    .projectText {
+    flex: 1;
+    font-size: 20px;
+      padding: 30px;
+      color: black;
+      text-align: left;
+    }
+    .projectTextTitle {
+    font-size: 25px;
+      padding: 5px;
+      color: black;
+      text-align: center;
+    }
+    
+    
     
   </style>
 </head>
@@ -216,42 +241,37 @@
     </div>
   </div>
   <hr class="styled-line">
-  <p class="projectSection">Projects</p>
-  	<div id="projectsSection" class="project-boxes">
-        <div class="project-box">
-          <h3>InTune</h3>
-          <div class="row">
-          <div class="column">
-          <p>Backend development in Java for a music reviewing desktop application. Configured Rest APIs, and AWS ec2 instance for remote user information storage. Additionally did some front end development by designing the profile pages of users. </p>
+  <p id="projectsSection" class="projectSection">Projects</p>
+        <div>
+          <h3 class="projectTextTitle">InTune</h3>
+          <div class="project-container">
+          <div class="projectTextBox">
+          <p class="projectText">Backend development in Java for a music reviewing desktop application. Configured Rest APIs, and AWS ec2 instance for remote user information storage. Additionally did some front end development by designing the profile pages of users. </p>
           </div>
           <div class="column">
           <img src="intunePhoto.png" alt="Photo of Application" class="projectPhoto">
           </div>
           </div>
-        </div>
-        <div class="project-box">
-          <h3>Cell Specific Age Calculation</h3>
-          <div class="row">
+        <div>
+          <h3 class="projectTextTitle">Cell Specific Age Calculation</h3>
+          <div class="project-container">
+          <div class="projectTextBox">
+          <p class="projectText">Wrote an R package that computes specific ages of cells, using epigenetic information. More specifically, the use of bulk methylation data as well as cell type proportions for the age inference.</p>
+          </div>
           <div class="column">
           <img src="cellAgePhoto.png" alt="Photo of Application" class="projectPhoto">
           </div>
-          <div class="column">
-          <p>Wrote an R package that computes specific ages of cells, using epigenetic information. More specifically, the use of bulk methylation data as well as cell type proportions for the age inference.</p>
-          </div>
         </div>
-        </div>
-        <div class="project-box">
-          <h3>MRI Classification</h3>
-          <div class="row">
-          <div class="column">
-          <p>Implemented a convolution neural network and tuned it for brain tumor MRI classification. The network is able to accurately distinguish between gliomas, meningioma, pituitary and non-tumor cases.</p>
+        <div>
+          <h3 class="projectTextTitle">MRI Classification</h3>
+          <div class="project-container">
+          <div class="projectTextBox">
+          <p class="projectText">Implemented a convolution neural network and tuned it for brain tumor MRI classification. The network is able to accurately distinguish between gliomas, meningioma, pituitary and non-tumor cases.</p>
           </div>
           <div class="column">
           <img src="mriImage.png" alt="Photo of Application" class="projectPhoto">
           </div>
         </div>
-        </div>
-      </div>
       <br>
       <hr class="styled-line">
     <div class="helpAnnotations">
