@@ -174,6 +174,12 @@
             border-top: 2px solid black;
             margin: 20px 80px;
     }
+    .projectPhoto {
+    	border: 5px solid green;
+      height: 150px;
+      width: 200px;
+      margin: 0 auto;
+    }
     
   </style>
 </head>
@@ -214,15 +220,36 @@
   	<div id="projectsSection" class="project-boxes">
         <div class="project-box">
           <h3>InTune</h3>
+          <div class="row">
+          <div class="column">
           <p>Backend development in Java for a music reviewing desktop application. Configured Rest APIs, and AWS ec2 instance for remote user information storage. Additionally did some front end development by designing the profile pages of users. </p>
+          </div>
+          <div class="column">
+          <img src="intunePhoto.png" alt="Photo of Application" class="projectPhoto">
+          </div>
+          </div>
         </div>
         <div class="project-box">
           <h3>Cell Specific Age Calculation</h3>
+          <div class="row">
+          <div class="column">
+          <img src="cellAgePhoto.png" alt="Photo of Application" class="projectPhoto">
+          </div>
+          <div class="column">
           <p>Wrote an R package that computes specific ages of cells, using epigenetic information. More specifically, the use of bulk methylation data as well as cell type proportions for the age inference.</p>
+          </div>
+        </div>
         </div>
         <div class="project-box">
           <h3>MRI Classification</h3>
+          <div class="row">
+          <div class="column">
           <p>Implemented a convolution neural network and tuned it for brain tumor MRI classification. The network is able to accurately distinguish between gliomas, meningioma, pituitary and non-tumor cases.</p>
+          </div>
+          <div class="column">
+          <img src="mriImage.png" alt="Photo of Application" class="projectPhoto">
+          </div>
+        </div>
         </div>
       </div>
       <br>
