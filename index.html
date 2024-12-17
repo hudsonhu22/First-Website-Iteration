@@ -51,15 +51,44 @@
       padding: 15px;
     }
 
-    .aboutBtn, .ProjectsBtn, .selfLearningBtn {
+    .buttons-container {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0px;
+    }
+
+    .buttons-container button {
       font-size: 20px;
       border: none;
       background-color: #FFFFFF;
       color: gray;
       cursor: pointer;
+      padding: 0px 20px;
+      width: 200px;
+      text-align: center;
+      border-radius: 5px;
     }
 
-    .aboutBtn:hover, .ProjectsBtn:hover, .selfLearningBtn:hover {
+    .buttons-container button:hover {
+      color: black;
+    }
+
+    .aboutBtn,
+    .ProjectsBtn,
+    .selfLearningBtn {
+      font-size: 20px;
+      border: none;
+      background-color: #FFFFFF;
+      color: gray;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    .aboutBtn:hover,
+    .ProjectsBtn:hover,
+    .selfLearningBtn:hover {
       color: black;
     }
 
@@ -160,7 +189,6 @@
     
     .helpSection, .projectSection {
       font-size: 30px;
-      padding: 5px;
       color: #663399;
       text-align: center;
     }
@@ -172,16 +200,16 @@
       text-align: center;
     }
     .styled-line {
-            border: none;
-            border-top: 2px solid black;
-            margin: 20px 80px;
+      border: none;
+      border-top: 2px solid black;
+      margin: 20px 80px;
     }
     .project-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    justify-content: space-between;
-    flex-wrap: wrap;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      justify-content: space-between;
+      flex-wrap: wrap;
 	}
 	
 	.projectPhoto {
@@ -194,12 +222,13 @@
 	
 	.projectTextBox {
 	    flex: 1;
+        padding: 150px;
+        
 	}
 	
 	.projectText {
 	    flex: 1;
 	    font-size: 20px;
-	    padding: 30px;
 	    color: black;
 	    text-align: left;
 	}
@@ -230,18 +259,24 @@
       <h1 class="BigHead">Hugo Hudson</h1>
       <h2>Computational Neuroscientist</h2>
       <img src="realisticLabPhoto.png" alt="Profile Photo" class="profilePhoto">
-      <p>
-        <button onclick="aboutFunction()" id="aboutBtn" class="aboutBtn">About</button>
-      </p>
-      <p>
-        <button onclick="projectsFunction()" id="projectsBtn" class="ProjectsBtn">Projects</button>
-      </p>
-      <p>
-        <button onclick="selfLearningFunction()" id="selfLearningBtn" class="selfLearningBtn">Self-Learning</button>
-      </p>
-      <a href="https://www.linkedin.com/in/hugo-hudson-a767b1326/" target="_blank" class="fab fa-linkedin"></a>
-      <a href="https://github.com/hudsonhu22" target="_blank" class="fab fa-github"></a>
-      <a href="contact.html" class="fa fa-envelope"></a>
+      <div class="buttons-container">
+    <p>
+      <button onclick="aboutFunction()" id="aboutBtn" class="aboutBtn">About</button>
+    </p>
+    <p>
+      <button onclick="projectsFunction()" id="projectsBtn" class="ProjectsBtn">Projects</button>
+    </p>
+    <p>
+      <button onclick="selfLearningFunction()" id="selfLearningBtn" class="selfLearningBtn">Self-Learning</button>
+    </p>
+  </div>
+  
+  <!-- Social media links -->
+  <div>
+    <a href="https://www.linkedin.com/in/hugo-hudson-a767b1326/" target="_blank" class="fab fa-linkedin"></a>
+    <a href="https://github.com/hudsonhu22" target="_blank" class="fab fa-github"></a>
+    <a href="contact.html" class="fa fa-envelope"></a>
+  </div>
     </div>
 
     <div class="column">
@@ -260,31 +295,32 @@
   <hr class="styled-line">
   <p id="projectsSection" class="projectSection">Projects</p>
         <div>
-          <h3 class="projectTextTitle">InTune</h3>
           <div class="project-container">
           <div class="projectTextBox">
-          <p class="projectText">Backend development in Java for a music reviewing desktop application. Configured Rest APIs, and AWS ec2 instance for remote user information storage. Additionally did some front end development by designing the profile pages of users. <br><br><a href="https://github.com/anzaruoft/MusicIntelliJence" class="projectLink" target="_blank">Click to go to project</a></p>
+          <h3 class="projectTextTitle">InTune</h3>
+          <p class="projectText"> An application for sharing music reviews with friends configured in java. Allows users to pull songs from spotify and leave reviews that only their friends can see. The user credentials remain private through the use of an AWS ec2 server for information storage. <br><br><a href="https://github.com/anzaruoft/MusicIntelliJence" class="projectLink" target="_blank">Click to go to project</a></p>
           </div>
           <div class="column">
           <img src="intunePhoto.png" alt="Photo of Application" class="projectPhoto">
           </div>
           </div>
         <div>
-          <h3 class="projectTextTitle">Cell Specific Age Calculation</h3>
+          
           <div class="project-container">
           <div class="projectTextBox">
-          <p class="projectText">Wrote an R package that computes specific ages of cells, using epigenetic information. More specifically, the use of bulk methylation data as well as cell type proportions for the age inference.<br><br><a href="https://github.com/hudsonhu22/EpigeneticAging" class="projectLink" target="_blank">Click to go to project</a></p>
+          <h3 class="projectTextTitle">Cell Specific Age Calculation</h3>
+          <p class="projectText"> An R package that computes specific ages of cells, using epigenetic information. More specifically, the package uses bulk methylation data in addition to cell type proportions for age inference of the cell types. Note, the package has only been used for interneurons as of now.<br><br><a href="https://github.com/hudsonhu22/EpigeneticAging" class="projectLink" target="_blank">Click to go to project</a></p>
           
           </div>
           <div class="column">
-          <img src="cellAgePhoto.png" alt="Photo of Application" class="projectPhoto">
+          <img src="cellAgePhoto.png" alt="Photo of Application" class="projectPhoto"
           </div>
         </div>
         <div>
-          <h3 class="projectTextTitle">MRI Classification</h3>
           <div class="project-container">
           <div class="projectTextBox">
-          <p class="projectText">Implemented a convolution neural network and tuned it for brain tumor MRI classification. The network is able to accurately distinguish between gliomas, meningioma, pituitary and non-tumor cases.<br><br><a href="https://github.com/hudsonhu22/Brain-Tumor-MRI-Classification" class="projectLink" target="_blank">Click to go to project</a></p>
+          <h3 class="projectTextTitle">MRI Classification</h3>
+          <p class="projectText">A guide on how to tune convolutional neural networks for image classification. The python walkthrough details how to build a MRI classifier to accurately distinguish between gliomas, meningioma, pituitary and non-tumour samples. <br><br><a href="https://github.com/hudsonhu22/Brain-Tumor-MRI-Classification" class="projectLink" target="_blank">Click to go to project</a></p>
           </div>
           <div class="column">
           <img src="mriImage.png" alt="Photo of Application" class="projectPhoto">
